@@ -1,0 +1,25 @@
+.m-head-bar {
+    padding: 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    min-height: 64px;
+    background: #1D1D1B;
+}
+
+.m-header-logout {
+    float: right;
+}
+
+.wrapper {
+    border-style: outset;
+    padding: 50px;
+    margin: 20px;
+}
+
+.icon-side {
+    float: right;
+}
+
+.text {
+    margin-left: 30 px;
+}

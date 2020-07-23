@@ -1,0 +1,36 @@
+.m-landing-btns {
+    background-color: #fff;
+    padding: 40px 25px;
+    width: 100%;
+}
+
+.m-landing-btns button {
+    font-weight: 500;
+    color: #1d1d1b;
+    width: 100%;
+    background: none;
+    border: 1px solid #1d1d1b;
+    border-radius: 2px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.m-landing-btns button:first-child {
+    background-color: #1d1d1b;
+    color: #fff;
+}
+
+.m-landing-btns button:last-child {
+    height: auto;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.m-landing-btns button:focus, .m-landing-btns button:active {
+    outline: none;
+}
+
+.n-heading {
+    text-align: center;
+}

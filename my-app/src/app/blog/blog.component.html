@@ -1,0 +1,41 @@
+<div *ngIf="username">
+    <h5><img src="../../assets/account.svg" alt="">Hello,{{username}}<button class="btn btn-primary"
+            style="float: right;" (click)="logout()" *ngIf="username"> Logout</button></h5>
+
+    <p><i>Hope you are doing well.</i></p>
+
+</div>
+
+<div>
+    <div *ngFor="let post of blog_Data.post">
+        <h6 style="margin-left: 20px;"><strong>{{post.username}}</strong></h6>
+        <div class=" wrapper">
+            <label><i>{{post.title}}</i></label>
+            <p>{{post.description}}</p>
+            <label>{{post.created_on | prettyDate }}</label>
+            <a class="icon-side" *ngIf="post.username==username" (click)="deletePost(post._id,post.title)"><img
+                    src="../../../assets/delete.svg" alt=""></a>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-9">
+    <label>Write your blog here..... <img src="../../assets//create.svg" alt=""></label>
+    <form [formGroup]="blogForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label>Title. :</label>
+            <input class="text" style="margin-left: 80px" formControlName="title" placeholder="title" required>
+        </div>
+        <div>
+            <label for="comment">Description. : </label>
+            <textarea class="form-control z-depth-1" formControlName="description" rows="10" spellcheck="false"
+                style="line-height: normal;"></textarea>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" [disabled]="!blogForm.valid" class="btn btn-primary"
+                style="margin-top: 10px;">post</button>
+        </div>
+    </form>
+
+</div>
